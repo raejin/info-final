@@ -1,0 +1,25 @@
+.related_hashtags {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  .ui.label {
+    margin: 0 0 5px;
+    text-transform: none;
+  }
+}
+.ios7 {
+  text-align: center;
+}
+.ios7_header {
+  margin-left: 10px;
+  color: #E49584;
+  font-size: 3em !important;
+  display: inline;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+.ios7.ui.label {
+  font-size: 3em !important;
+  text-transform: none !important;
+  color: #222 !important;
+  margin-bottom: 15px;
+}

@@ -1,8 +1,19 @@
 <% label_colors = ['black', 'green', 'red', 'blue', 'orange', 'purple', 'teal'] %>
+<div class="ios7">
+  <div class="ui icon header">
+  <i class="square inverted black apple icon"></i>
+</div>
+  <div class="ios7_header">Everything that are related to</div>
+  <span class="ios7 ui label">#iOS7</span>
+</div>
 <div class="related_hashtags">
-  <% @hashtags.each do |hashtag| %>
-    <a class="ui <%= label_colors[Random.new.rand(0..6)]%> label">
-      <%= hashtag %>
-    </a>
+  <% @hashtags.each do |hashtag, count| %>
+      <% rand = label_colors[Random.new.rand(0..6)]%>
+      <a class="ui <%= rand%> huge label" href="<%= get_hashtag_tweets_path(hashtag) %>">
+        #<%= hashtag %>
+        <span class="detail"><%= count %></span>
+      </a>
   <% end %>
 </div>
+
+<%= render 'tweets' %>

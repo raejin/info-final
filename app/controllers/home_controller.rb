@@ -5,7 +5,14 @@ class HomeController < ApplicationController
 
   def related_hashtags
     # @hashtags = Hashtag.uniq.pluck(:text)
-    @hashtags = Hashtag.uniq.pluck(:text)
+    @hashtags = Hashtag.count(:group => :text)
+    @tweets = []
+    if params[:hashtag]
+      hashtagy = Hashtag.where(["text LIKE :query", {:query => "%#{params[:hashtag]}%"}])
+      hashtagy.each do |h|
+        @tweets << h.tweet
+      end
+    end
   end
 
   def find_tweets_contain
