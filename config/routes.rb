@@ -3,7 +3,9 @@ Final::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#index', as: :root
+  get 'tweets' => 'home#find_tweets_contain', as: :find_tweets_contain
+  get 'hashtags' => 'home#related_hashtags', as: :related_hashtags
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

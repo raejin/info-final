@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="navigation" class="ui purple inverted menu">
+    <a class="<% if request.fullpath == '/' %>active <% end %>item" href="<%= root_path%>">
+      <i class="red star icon"></i> Info 257 Final
+    </a>
+    <span class="disabled item">
+      <i class="superscript icon"></i> Tiffany Yen
+    </span>
+    <span class="disabled item">
+      <i class="terminal icon"></i> Rae Liu
+    </span>
+    <a class="<% if request.fullpath == related_hashtags_path %>active <% end %>item" href="<%= related_hashtags_path %>">
+      <i class="blue tags icon"></i> Related hashtags
+    </a>
+  </div>
 
-<%= yield %>
+  <div class="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

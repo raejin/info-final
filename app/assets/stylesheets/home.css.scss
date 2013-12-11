@@ -1,3 +1,62 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.content .ui.header .sub.header {
+  color: #888;
+}
+
+.content .ui.header {
+  margin-left: 10px;
+}
+
+// .content .ui.green.label {
+//   // float: right;
+//   // margin-right: 30px;
+//   // background-color: #999;
+//   color: #222 !important;
+//   text-transform: none;
+//   // display: inline-block;
+//   font-size: 5em;
+//   // font-family: 'Open Sans';
+//   // padding: 5px 25px;
+//   // border: 1px solid #666;
+// }
+
+.tweets .item {
+  min-height: 220px !important;
+  background-color: #f4f4f4 !important;
+  .content > .description {
+    color: #777 !important;
+  }
+  overflow: hidden;
+  .extra {
+    display: none;
+  }
+}
+.tweet_divider.ui.clearing.divider {
+  border-color: transparent !important;
+}
+
+.tweet.ui.basic.modal {
+  .left {
+    font-size: 3em;
+  }
+  .right {
+    font-size: 1.5em;
+  }
+  .bottom {
+    margin: 5px 35px;
+    div {
+      display: inline-block;
+    }
+  }
+}
+
+#tweets_search {
+  .left {
+    display: inline-block;
+    float: left;
+  }
+  .right {
+  }
+}

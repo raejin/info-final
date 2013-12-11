@@ -1,0 +1,24 @@
+<div class="tweets">
+  <div class="ui items">
+    <% @tweets.each do |tweet| %>
+      <div class="item">
+        <div class="content">
+          <div class="name">
+            <% if tweet.user.url.empty? %>
+              <a href="<%= tweet.user.url %>"><%= tweet.user.handle %></a>
+            <% else %>
+              <%= tweet.user.handle %>
+            <% end %>
+          </div>
+          <div class="meta"><%= time_ago_in_words(tweet.created_at) %> ago from <%= raw(tweet.source) %></div>
+          <p class="description"><%= tweet.content %></p>
+        </div>
+        <div class="extra">
+          <div class="retweet_count"><%= tweet.retweet_count %></div>
+          <div class="favorite_count"><%= tweet.favorite_count %></div>
+          <div class="actual_date"><%= tweet.created_at.strftime('%l:%M %p %b %e, %Y') %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

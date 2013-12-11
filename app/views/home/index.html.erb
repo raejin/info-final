@@ -1,2 +1,43 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= render 'tweet_modal' %>
+
+<h2 class="ui header">
+  <i class="circular inverted purple question icon"></i>
+  <div class="content">
+    About the final project
+    <div class="sub header">It's all about the hype around #iOS7</div>
+  </div>
+</h2>
+
+<h2 class="ui header">
+  <i class="circular inverted blue search icon"></i>
+  <div class="content">
+    Search database
+    <div class="sub header">We've gotten you #iOS7 delivered!</div>
+  </div>
+</h2>
+
+<div id="tweets_search">
+  <div class="left">
+    <div class="ui icon header">
+      <i class="square inverted red twitter icon"></i>Tweets #iOS7
+    </div>
+  </div>
+  <div class="right">
+    <div class="ui huge icon input">
+      <%= form_tag(find_tweets_contain_path, method: 'get') do %>
+        <%= text_field_tag 'query', nil, placeholder: 'Search tweets contain...' %>
+      <% end %>
+      <i class="search icon"></i>
+    </div>
+  </div>
+</div>
+<div class="tweet_divider ui clearing divider"></div>
+
+<%= render 'tweets' %>
+
+<div class="ui icon header">
+  <i class="square inverted black apple icon"></i>Related hashtags
+</div>
+
+
+<!-- <span class="ui green label">#iOS7</span> -->

@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
  */
+
+ html, body {
+  margin: 0;
+  background-color: #222;
+ }
+
+ #navigation.menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+ }
+
+.content {
+  margin-top: 60px;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: #F05940;
+}
+
+a:hover {
+  color: #6ECFF5;
+}

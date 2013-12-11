@@ -1,0 +1,8 @@
+<% label_colors = ['black', 'green', 'red', 'blue', 'orange', 'purple', 'teal'] %>
+<div class="related_hashtags">
+  <% @hashtags.each do |hashtag| %>
+    <a class="ui <%= label_colors[Random.new.rand(0..6)]%> label">
+      <%= hashtag %>
+    </a>
+  <% end %>
+</div>
