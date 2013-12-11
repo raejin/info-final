@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def related_hashtags
+    # @hashtags = Hashtag.uniq.pluck(:text)
     @hashtags = Hashtag.uniq.pluck(:text)
   end
 
