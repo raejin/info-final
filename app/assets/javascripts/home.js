@@ -8,5 +8,4 @@ $(function () {
     modal.find('.favorite_count span').html($(this).find('.favorite_count').html());
     modal.modal('show');
   });
-
 });

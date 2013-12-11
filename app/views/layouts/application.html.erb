@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>INFO257 - Final Project User Interface</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -31,6 +31,6 @@
   <div class="content">
     <%= yield %>
   </div>
-
+  <%= render 'tweet_modal' %>
 </body>
 </html>
