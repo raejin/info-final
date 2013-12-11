@@ -1,0 +1,30 @@
+<div class="updated ui two column grid">
+  <div class="column">
+    <div class="ui piled blue segment">
+      <h2 class="ui header">
+        <div class="sentiment_filter">
+          <a href="<%= updated_sentiment_path('positive')%>" class="ui large circular button"><i class="icon huge teal smile"></i></a>
+          <a href="<%= updated_sentiment_path('negative')%>" class="ui large circular button"><i class="icon huge red frown"></i></a>
+          <a href="<%= updated_sentiment_path('neutral')%>" class="ui large circular button"><i class="icon huge meh"></i></a>
+        </div>
+        <i class="icon inverted circular red heart"></i> WE UPDATED!
+      </h2>
+      <div class="ui comments">
+        <% @tweets.each do |tweet| %>
+          <div class="comment">
+            <div class="content">
+              <a class="author"><%= tweet.user.name %></a>
+              <div class="metadata">
+                <span class="date"><%= time_ago_in_words(tweet.created_at) %> ago</span>
+              </div>
+              <div class="text"><%= tweet.content %></div>
+              <div class="actions">
+                <%= raw(tweet.source) %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

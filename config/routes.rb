@@ -7,6 +7,8 @@ Final::Application.routes.draw do
   get 'tweets' => 'home#find_tweets_contain', as: :find_tweets_contain
   get 'hashtags' => 'home#related_hashtags', as: :related_hashtags
   get 'hashtags/:hashtag' => 'home#related_hashtags', as: :get_hashtag_tweets
+  get 'updated' => 'home#who_updated', as: :who_updated
+  get 'updated/:sentiment' => 'home#updated_sentiment', as: :updated_sentiment
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

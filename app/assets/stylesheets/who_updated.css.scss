@@ -1,0 +1,19 @@
+.updated {
+  .sentiment_filter {
+    float: right;
+    display: inline;
+    i.icon {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .column {
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+  }
+  color: #555 !important;
+  .text {
+    color: #555 !important;
+  }
+}
