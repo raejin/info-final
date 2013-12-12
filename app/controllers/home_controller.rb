@@ -31,6 +31,15 @@ class HomeController < ApplicationController
     end
   end
 
+  def mention
+    @users = []
+    Mention.all.each do |m|
+      unless @users.include? m.user
+        @users << m.user
+      end
+    end
+  end
+
   def updated_sentiment
     @tweets = []
       if params[:sentiment] == 'positive'

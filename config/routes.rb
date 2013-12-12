@@ -9,6 +9,7 @@ Final::Application.routes.draw do
   get 'hashtags/:hashtag' => 'home#related_hashtags', as: :get_hashtag_tweets
   get 'updated' => 'home#who_updated', as: :who_updated
   get 'updated/:sentiment' => 'home#updated_sentiment', as: :updated_sentiment
+  get 'mention' => 'home#mention', as: :mention
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

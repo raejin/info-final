@@ -1,0 +1,12 @@
+<div class="mention ui relaxed horizontal divided list">
+  <% @users.each do |user| %>
+    <div class="item">
+      <i class="user marker icon"></i>
+      <div class="content">
+        <% if user.url.empty? %><%= user.handle %><% else %>
+        <a href="<%= user.url %>" class="header"><%= user.handle %></a><% end %>
+        <div class="description"># of mention: <%= Mention.where(["uid = :uid", {:uid => user.id}]).length%></div>
+      </div>
+    </div>
+  <% end %>
+</div>

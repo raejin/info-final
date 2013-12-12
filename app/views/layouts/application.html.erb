@@ -3,6 +3,7 @@
 <head>
   <title>INFO257 - Final Project User Interface</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -17,18 +18,18 @@
     <span class="disabled item">
       <i class="terminal icon"></i> Rae Liu
     </span>
-    <a class="<% if request.fullpath == related_hashtags_path %>active <% end %>item" href="<%= related_hashtags_path %>">
+    <a class="<% if request.fullpath.split('/')[1] == related_hashtags_path.split('/')[1] %>active <% end %>item" href="<%= related_hashtags_path %>">
       <i class="blue tags icon"></i> Related hashtags
     </a>
-    <a class="<% if request.fullpath == who_updated_path %>active <% end %>item" href="<%= who_updated_path %>">
+    <a class="<% if request.fullpath.split('/')[1] == who_updated_path.split('/')[1] %>active <% end %>item" href="<%= who_updated_path %>">
       <i class="red apple icon"></i> Who updated?
     </a>
-    <a class="<% if request.fullpath == related_hashtags_path %>active <% end %>item" href="<%= related_hashtags_path %>">
+    <a class="<% if request.fullpath.split('/')[1] == mention_path.split('/')[1] %>active <% end %>item" href="<%= mention_path %>">
       <i class="green users icon"></i> Who was mentioned?
     </a>
   </div>
 
-  <div class="content">
+  <div id="content">
     <%= yield %>
   </div>
   <%= render 'tweet_modal' %>
